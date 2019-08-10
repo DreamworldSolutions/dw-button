@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Dw button</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="dw tooltip">
+  </head>
+  <style>
+    body {
+      background-color: #f3f3f3;
+    }
+    section {
+      display: flex;
+      flex-direction: row;
+    }
+    dw-button {
+      --primary-text-color: grey;
+      --primary-color: blue;
+      --accent-color: #50cA00;
+      --dark-primary-text-color: red;
+      margin: 20px;
+    }
+    .dark-theme {
+      --primary-text-color: var(--dark-primary-text-color);
+    }
+  </style>
+  <body>
+
+    <h2> button with regular size </h2>
+    <section>
+      <dw-button label="normal"></dw-button>
+      <dw-button label="outlined" outlined></dw-button>
+      <dw-button label="primary" filled class="primary"></dw-button>
+      <dw-button label="accent" filled class="accent"></dw-button>
+      <dw-button label="raised" raised></dw-button>
+      <dw-button label="accent" raised class="accent"></dw-button>
+      <dw-button label="disabled" disabled></dw-button>
+    </section>
+
+    <h2> button with small size </h2>
+    <dw-button label="normal" class="small"></dw-button>
+    <dw-button label="outlined" outlined class="small"></dw-button>
+    <dw-button label="primary" filled class="primary small"></dw-button>
+    <dw-button label="accent" filled class="accent small"></dw-button>
+    <dw-button label="raised" raised class="small"></dw-button>
+    <dw-button label="accent" raised class="accent small"></dw-button>
+    <dw-button label="disabled" disabled class="small"></dw-button>
+    
+    <h2> dark theme </h2>
+    <dw-button label="dark theme" class="dark-theme"></dw-button>
+    <dw-button label="outlined" outlined class="dark-theme"></dw-button>
+    <dw-button label="disabled" disabled class="dark-theme"></dw-button>
+    <dw-button label="disabled" disabled outlined class="dark-theme"></dw-button>
+
+    <noscript>
+      Please enable JavaScript to view this website.
+    </noscript>
+     
+    <!-- Load webcomponents-loader.js to check and load any polyfills your browser needs -->
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <!-- Built with love using PWA Starter Kit -->
+    <script type="module" src="../dw-button.js"></script>
+  </body>
+</html>
