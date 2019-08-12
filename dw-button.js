@@ -13,11 +13,14 @@ import { css } from 'lit-element';
 // These are the mwc element needed by this element.
 import { Button } from "@material/mwc-button"
 
-class DWButton extends Button {
+export class DWButton extends Button {
   static get styles() {
     return [
       Button.styles,
       css`
+        .mdc-button {
+          box-sizing: border-box;
+        }
         :host(.small) .mdc-button  {
           height: 22px;
         }
@@ -57,6 +60,9 @@ class DWButton extends Button {
         :host([filled].accent) .mdc-button:not(:disabled) {
           --mdc-theme-primary: var(--dark-primary-text-color); 
           background-color: var(--accent-color);
+        }
+        :host([disabled]) .mdc-button:disabled  {
+          color: var(--disabled-text-color);
         }
         `,
     ];

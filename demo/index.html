@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Dw button</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="dw tooltip">
+    <meta name="description" content="dw button">
   </head>
   <style>
     body {
@@ -15,11 +15,29 @@
       flex-direction: row;
     }
     dw-button {
-      --primary-text-color: grey;
+      margin: 0px 20px;
+
       --primary-color: blue;
       --accent-color: #50cA00;
+
+      /**
+        app light theme color
+      */
+      --light-primary-text-color: grey;
+      --light-disabled-text-color: #BDBDBD;
+      --light-divider-color: #B6B6B6;
+
+
+      /**
+        app dark theme color
+      */
       --dark-primary-text-color: red;
-      margin: 20px;
+
+      /**
+        default theme color
+      */
+      --primary-text-color: var(--light-primary-text-color);
+      --disabled-text-color: var(--light-disabled-text-color);
     }
     .dark-theme {
       --primary-text-color: var(--dark-primary-text-color);
@@ -36,6 +54,7 @@
       <dw-button label="raised" raised></dw-button>
       <dw-button label="accent" raised class="accent"></dw-button>
       <dw-button label="disabled" disabled></dw-button>
+      <dw-button label="disabled" disabled outlined></dw-button>
     </section>
 
     <h2> button with small size </h2>
@@ -46,6 +65,7 @@
     <dw-button label="raised" raised class="small"></dw-button>
     <dw-button label="accent" raised class="accent small"></dw-button>
     <dw-button label="disabled" disabled class="small"></dw-button>
+    <dw-button label="disabled" disabled outlined></dw-button>
     
     <h2> dark theme </h2>
     <dw-button label="dark theme" class="dark-theme"></dw-button>
