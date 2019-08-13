@@ -2,14 +2,14 @@ A button Webcomponent created through LitElement and mwc-button(https://www.webc
 
 ## Install
 ```html
-	npm install @dreamworld/dw-button
+npm install @dreamworld/dw-button
 ```
 
 ## Usage
 ```html
-	import '@dreamworld/dw-button/dw-button.js';
+import '@dreamworld/dw-button/dw-button.js';
 
-	<dw-button label="normal"></dw-button>
+<dw-button label="normal"></dw-button>
 ```
 
 ## Configs/Options
@@ -21,10 +21,10 @@ To configure color of the button using css variable.
 
 ```css
 dw-button {
-	--primary-text-color: grey;
-	--primary-color: blue;
-	--accent-color: #50cA00;
-	--dark-primary-text-color: white;
+--primary-text-color: grey;
+--primary-color: blue;
+--accent-color: #50cA00;
+--dark-primary-text-color: white;
 }
 
 ```
