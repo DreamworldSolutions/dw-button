@@ -12,7 +12,7 @@ import '@dreamworld/dw-button/dw-button.js';
 <dw-button label="normal"></dw-button>
 ```
 
-## [Demo](https://dreamworldsolutions.github.io/dw-checkbox/demo/index.html)
+## [Demo](https://dreamworldsolutions.github.io/dw-button/demo/index.html)
 
 ## Configs/Options
 It supports all the properties of mwc-button. It support extra property
