@@ -64,6 +64,32 @@ export class DWButton extends Button {
         :host([disabled]) .mdc-button:disabled  {
           color: var(--disabled-text-color);
         }
+        :host([disabled].primary) .mdc-button:disabled  {
+          background-color: var(--primary-color);
+        }
+        :host([disabled].accent) .mdc-button:disabled  {
+          background-color: var(--accent-color);
+        }
+        :host([raised]) .mdc-button--raised:not(:disabled) {
+          --mdc-theme-primary: transparent;
+          color: var(--primary-text-color);
+        }
+        :host([raised].primary) .mdc-button--raised:not(:disabled) {
+          --mdc-theme-primary: transparent;
+          color: var(--primary-color);
+        }
+        :host([raised].accent) .mdc-button--raised:not(:disabled) {
+          --mdc-theme-primary: transparent;
+          color: var(--accent-color);
+        }
+        :host([filled].primary) .mdc-button--raised:not(:disabled) {
+          --mdc-theme-primary: var(--primary-color);
+          color: var(--dark-primary-text-color);
+        }
+        :host([filled].accent) .mdc-button--raised:not(:disabled) {
+          --mdc-theme-primary: var(--accent-color);
+          color: var(--dark-primary-text-color);
+        }
         `,
     ];
   }

@@ -8,30 +8,27 @@
   </head>
   <style>
     body {
-      background-color: #f3f3f3;
+      background-color: #ebe1ed;
     }
     section {
       display: flex;
       flex-direction: row;
     }
     dw-button {
-      margin: 0px 20px;
-
       --primary-color: blue;
       --accent-color: #50cA00;
 
-      /**
-        app light theme color
-      */
+      /*
+       * Material Design light background theme
+       */
       --light-primary-text-color: grey;
-      --light-disabled-text-color: #BDBDBD;
-      --light-divider-color: #B6B6B6;
+      --light-disabled-text-color: #9b9b9b;
 
-
-      /**
-        app dark theme color
-      */
-      --dark-primary-text-color: red;
+      /*
+       * Material Design Dark background theme
+       */
+      --dark-primary-text-color: white;
+      --dark-disabled-text-color: #646464;
 
       /**
         default theme color
@@ -41,38 +38,301 @@
     }
     .dark-theme {
       --primary-text-color: var(--dark-primary-text-color);
+      --disabled-text-color: var(--dark-disabled-text-color);
+    }
+    table {
+      width: 100%;
+    }
+    table tr th {
+      height: 35px;
+    }
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    table tr {
+      text-align: center;
+    }
+    table tr td {
+      padding: 10px 0px;
     }
   </style>
   <body>
-
-    <h2> button with regular size </h2>
-    <section>
-      <dw-button label="normal"></dw-button>
-      <dw-button label="outlined" outlined></dw-button>
-      <dw-button label="primary" filled class="primary"></dw-button>
-      <dw-button label="accent" filled class="accent"></dw-button>
-      <dw-button label="raised" raised></dw-button>
-      <dw-button label="accent" raised class="accent"></dw-button>
-      <dw-button label="disabled" disabled></dw-button>
-      <dw-button label="disabled" disabled outlined></dw-button>
-    </section>
-
-    <h2> button with small size </h2>
-    <dw-button label="normal" class="small"></dw-button>
-    <dw-button label="outlined" outlined class="small"></dw-button>
-    <dw-button label="primary" filled class="primary small"></dw-button>
-    <dw-button label="accent" filled class="accent small"></dw-button>
-    <dw-button label="raised" raised class="small"></dw-button>
-    <dw-button label="accent" raised class="accent small"></dw-button>
-    <dw-button label="disabled" disabled class="small"></dw-button>
-    <dw-button label="disabled" disabled outlined></dw-button>
+    <h4> Button with regular size - 36px</h4>
+    <table>
+      <tr>
+        <th>Property</th>
+        <th>Class</th>
+        <th>Property - raised</th>
+        <th>Button</th>
+      </tr>
+      <tr>
+        <td>Default</td>
+        <td>-</td> 
+        <td>NO</td>
+        <td><dw-button label="normal"></dw-button></td>
+      </tr>
+      <tr>
+        <td>Default</td>
+        <td>primary</td> 
+        <td>NO</td>
+        <td><dw-button label="normal" class="primary"></dw-button></td>
+       </tr>
+       <tr>
+          <td>Default</td>
+          <td>accent</td> 
+          <td>NO</td>
+          <td><dw-button label="normal" class="accent"></dw-button></td>
+       </tr>
+       <tr>
+          <td>Default</td>
+          <td>-</td> 
+          <td>YES</td>
+          <td><dw-button label="normal" raised></dw-button></td>
+       </tr>
+       <tr>
+          <td>Default</td>
+          <td>primary</td> 
+          <td>YES</td>
+          <td><dw-button label="normal" raised class="primary"></dw-button></td>
+       </tr>
+       <tr>
+          <td>Default</td>
+          <td>accent</td> 
+          <td>YES</td>
+          <td><dw-button label="normal" raised class="accent"></dw-button></td>
+       </tr>
+       <tr>
+          <td>Outline</td>
+          <td>-</td> 
+          <td>N/A</td>
+          <td><dw-button label="outlined" outlined></dw-button></td>
+       </tr>
+       <tr>
+          <td>Outline</td>
+          <td>primary</td> 
+          <td>N/A</td>
+          <td><dw-button label="outlined" class="primary" outlined></dw-button></td>
+       </tr>
+       <tr>
+          <td>Outline</td>
+          <td>accent</td> 
+          <td>N/A</td>
+          <td><dw-button label="outlined" class="accent" outlined></dw-button></td>
+       </tr>
+       <tr>
+          <td>Fiiled</td>
+          <td>- or primary</td> 
+          <td>NO</td>
+          <td><dw-button label="filled" class="primary" filled></dw-button></td>
+       </tr>
+       <tr>
+          <td>Fiiled</td>
+          <td>accent</td> 
+          <td>NO</td>
+          <td><dw-button label="filled" class="accent" filled></dw-button></td>
+       </tr>
+       <tr>
+          <td>Fiiled</td>
+          <td>- or primary</td> 
+          <td>YES</td>
+          <td><dw-button label="filled" raised class="primary" filled></dw-button></td>
+       </tr>
+       <tr>
+          <td>Fiiled</td>
+          <td>accent</td> 
+          <td>YES</td>
+          <td><dw-button label="filled" raised class="accent" filled></dw-button></td>
+       </tr>
+       <tr>
+          <td>disabled</td>
+          <td>-</td> 
+          <td>No</td>
+          <td><dw-button label="disabled" disabled></dw-button></td>
+       </tr>
+       <tr>
+          <td>disabled and filled</td>
+          <td>primary</td> 
+          <td>No</td>
+          <td><dw-button label="disabled" filled disabled class="primary"></dw-button></td>
+       </tr>
+       <tr>
+          <td>disabled and filled</td>
+          <td>accent</td> 
+          <td>No</td>
+          <td><dw-button label="disabled" filled disabled class="accent"></dw-button></td>
+       </tr>
+    </table>
     
-    <h2> dark theme </h2>
-    <dw-button label="dark theme" class="dark-theme"></dw-button>
-    <dw-button label="outlined" outlined class="dark-theme"></dw-button>
-    <dw-button label="disabled" disabled class="dark-theme"></dw-button>
-    <dw-button label="disabled" disabled outlined class="dark-theme"></dw-button>
-
+    <h4> Button with small size - 22px</h4>
+    <table>
+        <tr>
+          <th>Property</th>
+          <th>Class</th>
+          <th>Property - raised</th>
+          <th>Button</th>
+        </tr>
+        <tr>
+          <td>Default</td>
+          <td>-</td> 
+          <td>NO</td>
+          <td><dw-button label="normal" class="small"></dw-button></td>
+        </tr>
+        <tr>
+          <td>Default</td>
+          <td>primary</td> 
+          <td>NO</td>
+          <td><dw-button label="normal" class="primary small"></dw-button></td>
+         </tr>
+         <tr>
+            <td>Default</td>
+            <td>accent</td> 
+            <td>NO</td>
+            <td><dw-button label="normal" class="accent small"></dw-button></td>
+         </tr>
+         <tr>
+            <td>Default</td>
+            <td>-</td> 
+            <td>YES</td>
+            <td><dw-button label="normal" raised class="small"></dw-button></td>
+         </tr>
+         <tr>
+            <td>Default</td>
+            <td>Primary</td> 
+            <td>YES</td>
+            <td><dw-button label="normal" raised class="primary small"></dw-button></td>
+         </tr>
+         <tr>
+            <td>Default</td>
+            <td>accent</td> 
+            <td>YES</td>
+            <td><dw-button label="normal" raised class="accent small"></dw-button></td>
+         </tr>
+         <tr>
+            <td>Outline</td>
+            <td>-</td> 
+            <td>N/A</td>
+            <td><dw-button label="outlined" outlined class="small"></dw-button></td>
+         </tr>
+         <tr>
+            <td>Outline</td>
+            <td>Primary</td> 
+            <td>N/A</td>
+            <td><dw-button label="outlined" class="primary small" outlined></dw-button></td>
+         </tr>
+         <tr>
+            <td>Outline</td>
+            <td>accent</td> 
+            <td>N/A</td>
+            <td><dw-button label="outlined" class="accent small" outlined></dw-button></td>
+         </tr>
+         <tr>
+            <td>Fiiled</td>
+            <td>- or Primary</td> 
+            <td>NO</td>
+            <td><dw-button label="filled" class="primary small" filled></dw-button></td>
+         </tr>
+         <tr>
+            <td>Fiiled</td>
+            <td>accent</td> 
+            <td>NO</td>
+            <td><dw-button label="filled" class="accent small" filled></dw-button></td>
+         </tr>
+         <tr>
+            <td>Fiiled</td>
+            <td>- or Primary</td> 
+            <td>YES</td>
+            <td><dw-button label="filled" raised class="primary small" filled></dw-button></td>
+         </tr>
+         <tr>
+            <td>Fiiled</td>
+            <td>accent</td> 
+            <td>YES</td>
+            <td><dw-button label="filled" raised class="accent small" filled></dw-button></td>
+         </tr>
+         <tr>
+          <td>disabled</td>
+          <td>-</td> 
+          <td>No</td>
+          <td><dw-button label="disabled" disabled class="small"></dw-button></td>
+         </tr>
+         <tr>
+          <td>disabled and filled</td>
+          <td>primary</td> 
+          <td>No</td>
+          <td><dw-button label="disabled" filled disabled class="primary small"></dw-button></td>
+         </tr>
+         <tr>
+          <td>disabled and filled</td>
+          <td>accent</td> 
+          <td>No</td>
+          <td><dw-button label="disabled" filled disabled class="accent small"></dw-button></td>
+         </tr>
+    </table>
+    
+    <h4>Dark theme with regular size</h4>
+    <table>
+      <tr>
+        <th>Property</th>
+        <th>Class</th>
+        <th>Property - raised</th>
+        <th>Button</th>
+      </tr>
+      <tr>
+        <td>Default</td>
+        <td>dark-theme</td> 
+        <td>NO</td>
+        <td><dw-button label="normal" class="dark-theme"></dw-button></td>
+      </tr>
+      <tr>
+        <td>Default</td>
+        <td>dark-theme</td> 
+        <td>YES</td>
+        <td><dw-button label="normal" raised class="dark-theme"></dw-button></td>
+      </tr>
+      <tr>
+        <td>outlined</td>
+        <td>dark-theme</td> 
+        <td>NO</td>
+        <td><dw-button label="outlined" outlined class="dark-theme"></dw-button></td>
+      </tr>
+      <tr>
+        <td>filled</td>
+        <td>dark-theme or primary</td> 
+        <td>NO</td>
+        <td><dw-button label="filled" filled class="dark-theme primary"></dw-button></td>
+      </tr>
+      <tr>
+        <td>filled</td>
+        <td>dark-theme and accent</td> 
+        <td>NO</td>
+        <td><dw-button label="filled" filled class="dark-theme accent"></dw-button></td>
+      </tr>
+      <tr>
+        <td>filled</td>
+        <td>dark-theme or primary</td> 
+        <td>YES</td>
+        <td><dw-button label="filled" filled raised class="dark-theme primary"></dw-button></td>
+        </tr>
+      <tr>
+        <td>filled</td>
+        <td>dark-theme and accent</td> 
+        <td>YES</td>
+        <td><dw-button label="filled" filled raised class="dark-theme accent"></dw-button></td>
+      </tr>
+      <tr>
+        <td>disabled</td>
+        <td>dark-theme</td> 
+        <td>NO</td>
+        <td><dw-button label="disabled" disabled class="dark-theme"></dw-button></td>
+      </tr>
+      <tr>
+        <td>outlined and disabled</td>
+        <td>dark-theme</td> 
+        <td>NO</td>
+        <td><dw-button label="disabled" disabled outlined class="dark-theme"></dw-button></td>
+      </tr>
+    </table>
     <noscript>
       Please enable JavaScript to view this website.
     </noscript>
