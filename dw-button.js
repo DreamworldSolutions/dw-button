@@ -110,6 +110,11 @@ export class DWButton extends Button {
   constructor(){
     super();
     this.filled = false;
+
+    /**
+    * call blur method to fix ripple effect after radiobutton click.
+    */
+    this.addEventListener('click', () => { this.blur(); })
   }
 }
 
