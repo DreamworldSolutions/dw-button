@@ -60,6 +60,13 @@ export class DWButton extends Button {
         :host([disabled]) .mdc-button:disabled  {
           color: var(--disabled-text-color);
         }
+        :host([disabled][outlined]) .mdc-button--outlined:disabled  {
+          border-color: var(--disabled-text-color);
+        }
+        :host([filled][disabled]) .mdc-button:disabled {
+          background-color: var(--disabled-background-color);
+          color: var(--disabled-text-color);
+        }
         :host([disabled].primary) .mdc-button:disabled  {
           background-color: var(--primary-color);
         }
