@@ -49,10 +49,6 @@ export class DWButton extends Button {
           --mdc-theme-primary: var(--dark-primary-text-color); 
           background-color: var(--primary-color);
         }
-        :host([filled]) .mdc-button:not(:disabled) {
-          --mdc-theme-primary: var(--dark-primary-text-color); 
-          background-color: var(--primary-color);
-        }
         :host([filled].primary) .mdc-button:not(:disabled) {
           --mdc-theme-primary: var(--dark-primary-text-color); 
           background-color: var(--primary-color);
@@ -72,23 +68,23 @@ export class DWButton extends Button {
         }
         :host([raised]) .mdc-button--raised:not(:disabled) {
           --mdc-theme-primary: transparent;
-          color: var(--primary-text-color);
+          --mdc-theme-on-primary: var(--primary-text-color);
         }
         :host([raised].primary) .mdc-button--raised:not(:disabled) {
           --mdc-theme-primary: transparent;
-          color: var(--primary-color);
+          --mdc-theme-on-primary: var(--primary-color);
         }
         :host([raised].accent) .mdc-button--raised:not(:disabled) {
           --mdc-theme-primary: transparent;
-          color: var(--accent-color);
+          --mdc-theme-on-primary: var(--accent-color);
         }
         :host([filled].primary) .mdc-button--raised:not(:disabled) {
           --mdc-theme-primary: var(--primary-color);
-          color: var(--dark-primary-text-color);
+          --mdc-theme-on-primary: var(--dark-primary-text-color);
         }
         :host([filled].accent) .mdc-button--raised:not(:disabled) {
           --mdc-theme-primary: var(--accent-color);
-          color: var(--dark-primary-text-color);
+          --mdc-theme-on-primary: var(--dark-primary-text-color);
         }
         `,
     ];
@@ -112,7 +108,7 @@ export class DWButton extends Button {
     this.filled = false;
 
     /**
-    * call blur method to fix ripple effect after radiobutton click.
+    * call blur method to fix ripple effect after button click.
     */
     this.addEventListener('click', () => { this.blur(); })
   }
