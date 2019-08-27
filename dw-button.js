@@ -22,61 +22,47 @@ export class DWButton extends Button {
           box-sizing: border-box;
         }
 
-        /** Noraml button start */
-        :host(.small) .mdc-button  {
-          height: 22px;
+        /** normal button css start */
+        :host(.secondary) .mdc-button  {
+          --mdc-theme-primary: var(--mdc-theme-secondary);
         }
-        :host .mdc-button {
-          --mdc-theme-primary: var(--primary-text-color);
-        }
-        :host(.primary) .mdc-button  {
-          --mdc-theme-primary: var(--primary-color);
-        }
-        :host(.accent) .mdc-button  {
-          --mdc-theme-primary: var(--accent-color);
-        }
-        :host([raised]) .mdc-button--raised:not(:disabled) {
-          --mdc-theme-primary: transparent;
-          --mdc-theme-on-primary: var(--primary-text-color);
-        }
-        :host([raised].primary) .mdc-button--raised:not(:disabled) {
-          --mdc-theme-primary: transparent;
-          --mdc-theme-on-primary: var(--primary-color);
+        :host(.error) .mdc-button  {
+          --mdc-theme-primary: var(--mdc-theme-error);
         }
         :host([raised].accent) .mdc-button--raised:not(:disabled) {
-          --mdc-theme-primary: transparent;
-          --mdc-theme-on-primary: var(--accent-color);
+          --mdc-theme-primary:  var(--mdc-theme-secondary);
+          --mdc-theme-on-primary:  var(--mdc-theme-on-secondary);
+        }
+        :host([raised].error) .mdc-button--raised:not(:disabled) {
+          --mdc-theme-primary:  var(--mdc-theme-error);
+          --mdc-theme-on-primary:  var(--mdc-theme-on-error);
         }
         :host([disabled]) .mdc-button:disabled  {
-          color: var(--disabled-text-color);
+          color: var(--mdc-theme-text-disabled);
         }
 
-        /** outline button start */
+        /** outline button  css start */
+        :host([outlined]) .mdc-button--outlined:disabled  {
+          --mdc-theme-primary: var(--mdc-theme-secondary);
+        }
+        :host([error]) .mdc-button--outlined:disabled  {
+          --mdc-theme-primary: var(--mdc-theme-error);
+        }
         :host([disabled][outlined]) .mdc-button--outlined:disabled  {
-          border-color: var(--disabled-text-color);
+          border-color: var(--mdc-theme-text-disabled);
         }
 
         /** filled button start */
-        :host([filled]) .mdc-button:not(:disabled),
-        :host([filled].primary) .mdc-button:not(:disabled) {
-          --mdc-theme-primary: var(--dark-primary-text-color); 
-          background-color: var(--primary-color);
+        :host([filled]) .mdc-button:not(:disabled){
+          background-color: var(--mdc-theme-primary);
+          color: var(--mdc-theme-on-primary); 
         }
-        :host([filled].accent) .mdc-button:not(:disabled) {
-          --mdc-theme-primary: var(--dark-primary-text-color); 
-          background-color: var(--accent-color);
-        }
-        :host([filled]) .mdc-button--raised:not(:disabled),
-        :host([filled].primary) .mdc-button--raised:not(:disabled) {
-          --mdc-theme-primary: var(--primary-color);
-          --mdc-theme-on-primary: var(--dark-primary-text-color);
-        }
-        :host([filled].accent) .mdc-button--raised:not(:disabled) {
-          --mdc-theme-primary: var(--accent-color);
-          --mdc-theme-on-primary: var(--dark-primary-text-color);
+        :host([filled].secondary) .mdc-button:not(:disabled) {
+          background-color: var(--mdc-theme-secondary);
+          color: var(--mdc-theme-on-secondary); 
         }
         :host([filled][disabled]) .mdc-button:disabled {
-          background-color: var(--disabled-background-color);
+          background-color: var(--mdc-theme-disabled);
         }
         `,
     ];
