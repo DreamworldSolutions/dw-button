@@ -29,16 +29,21 @@ export class DWButton extends Button {
         :host(.error) .mdc-button  {
           --mdc-theme-primary: var(--mdc-theme-error);
         }
-        :host([raised].accent) .mdc-button--raised:not(:disabled) {
-          --mdc-theme-primary:  var(--mdc-theme-secondary);
-          --mdc-theme-on-primary:  var(--mdc-theme-on-secondary);
+        :host([raised].secondary) .mdc-button--raised:not(:disabled) {
+          --mdc-theme-primary:  var(--mdc-theme-surface);
+          --mdc-theme-on-primary:  var(--mdc-theme-secondary);
         }
         :host([raised].error) .mdc-button--raised:not(:disabled) {
-          --mdc-theme-primary:  var(--mdc-theme-error);
-          --mdc-theme-on-primary:  var(--mdc-theme-on-error);
+          --mdc-theme-primary:  var(--mdc-theme-surface);
+          --mdc-theme-on-primary:  var(--mdc-theme-error);
         }
         :host([disabled]) .mdc-button:disabled  {
           color: var(--mdc-theme-text-disabled);
+        }
+
+        /** primary-text button  css start */
+        :host(.primary-text) .mdc-button  {
+          --mdc-theme-primary: var(--mdc-theme-text-primary);
         }
 
         /** outline button  css start */
@@ -62,9 +67,9 @@ export class DWButton extends Button {
           color: var(--mdc-theme-on-secondary); 
         }
         :host([filled][disabled]) .mdc-button:disabled {
-          background-color: var(--mdc-theme-disabled);
+          background-color: var( --dw-disabled-background-color, var(--mdc-theme-divider-on-light));
         }
-        `,
+        `
     ];
   }
 

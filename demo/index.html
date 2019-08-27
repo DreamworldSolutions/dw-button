@@ -17,27 +17,14 @@
       --mdc-theme-primary: #6200EE;
       --mdc-theme-secondary: #018786;
       --mdc-theme-error: #b00020;
-      --mdc-theme-disabled: rgba(0, 0, 0, 0.12);
-
+      --mdc-theme-surface: #fff;
+      
       --mdc-theme-on-primary: #fff;
       --mdc-theme-on-secondary: #fff;
       --mdc-theme-on-error: #fff;
       --mdc-theme-text-disabled: rgba(0, 0, 0, 0.38);
-
       --mdc-theme-text-primary: rgba(0, 0, 0, 0.87);
-    }
-    .dark-theme {
-      --mdc-theme-primary: #BB86FC;
-      --mdc-theme-secondary: #03DAC6;
-      --mdc-theme-error: #CF6679;
-      --mdc-theme-disabled: rgba(0, 0, 0, 0.2);
-
-      --mdc-theme-on-primary: #000;
-      --mdc-theme-on-secondary: #000;
-      --mdc-theme-on-error: #000;
-      --mdc-theme-text-disabled: rgba(255, 255, 255, 0.38);
-
-      --mdc-theme-text-primary: rgba(255, 255, 255, 0.87);
+      --dw-disabled-background-color: rgba(0, 0, 0, 0.12);
     }
   </style>
   <body>
@@ -46,8 +33,7 @@
       <dw-button label="normal"></dw-button>
       <dw-button label="normal" class="secondary"></dw-button>
       <dw-button label="normal" class="error"></dw-button>
-      <dw-button label="normal" raised></dw-button>
-      <dw-button label="normal" raised class="accent"></dw-button>
+      <dw-button label="normal" raised class="secondary"></dw-button>
       <dw-button label="normal" raised class="error"></dw-button>
       <dw-button label="normal" disabled></dw-button>
     </section>
@@ -65,6 +51,11 @@
       <dw-button label="filled" filled raised></dw-button>
       <dw-button label="filled" filled raised class="secondary"></dw-button>
       <dw-button label="filled" filled disabled></dw-button>
+    </section>
+    <h4>primary text</h4>
+    <section>
+      <dw-button label="normal" class="primary-text"></dw-button>
+      <dw-button label="outlined" outlined class="primary-text"></dw-button>
     </section>
     <noscript>
       Please enable JavaScript to view this website.
