@@ -18,10 +18,6 @@ export class DWButton extends Button {
     return [
       Button.styles,
       css`
-        .mdc-button {
-          box-sizing: border-box;
-        }
-
         /** normal button css start */
         :host(.secondary) .mdc-button  {
           --mdc-theme-primary: var(--mdc-theme-secondary);
