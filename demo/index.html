@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Dw button</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="dw button">
+</head>
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .main {
+    padding: 24px;
+    background-color: var(--mdc-theme-surface);
+    color: var(--mdc-theme-text-primary);
+
+    --mdc-theme-primary: #6200EE;
+    --mdc-theme-secondary: #018786;
+    --mdc-theme-error: #b00020;
+    --mdc-theme-surface: #fff;
+
+    --mdc-theme-on-primary: #fff;
+    --mdc-theme-on-secondary: #fff;
+    --mdc-theme-on-error: #fff;
+    --mdc-theme-text-disabled: rgba(0, 0, 0, 0.38);
+    --mdc-theme-text-primary: rgba(0, 0, 0, 0.87);
+    --dw-disabled-background-color: rgba(0, 0, 0, 0.12);
+  }
+
+  .dark-theme {
+    --mdc-theme-primary: #BB86FC;
+    --mdc-theme-secondary: #03DAC6;
+    --mdc-theme-error: #CF6679;
+    --mdc-theme-surface: #121212;
+
+    --mdc-theme-on-primary: #000;
+    --mdc-theme-on-secondary: #000;
+    --mdc-theme-on-error: #000;
+    --mdc-theme-text-disabled: rgba(255, 255, 255, 0.38);
+    --mdc-theme-text-primary: rgba(255, 255, 255, 0.87);
+    --dw-disabled-background-color: rgba(255, 2555, 255, 0.12);
+  }
+
+  section {
+    display: flex;
+    flex-direction: row;
+  }
+
+  dw-button {
+    margin: 0px 10px;
+  }
+</style>
+
+<body>
+  <div class="main">
+    <h4>Style: Default</h4>
+    <section>
+      <dw-button label="normal"></dw-button>
+      <dw-button label="normal" class="secondary"></dw-button>
+      <dw-button label="normal" class="error"></dw-button>
+      <dw-button label="normal" raised class="secondary"></dw-button>
+      <dw-button label="normal" raised class="error"></dw-button>
+      <dw-button label="normal" disabled></dw-button>
+    </section>
+    <h4>Style: Outlined</h4>
+    <section>
+      <dw-button label="outlined" outlined></dw-button>
+      <dw-button label="outlined" outlined class="secondary"></dw-button>
+      <dw-button label="outlined" outlined class="error"></dw-button>
+      <dw-button label="outlined" outlined disabled></dw-button>
+    </section>
+    <h4>Style: Filled</h4>
+    <section>
+      <dw-button label="filled" filled></dw-button>
+      <dw-button label="filled" filled class="secondary"></dw-button>
+      <dw-button label="filled" filled raised></dw-button>
+      <dw-button label="filled" filled raised class="secondary"></dw-button>
+      <dw-button label="filled" filled disabled></dw-button>
+    </section>
+    <h4>Text buttons</h4>
+    <section>
+      <dw-button label="normal" class="text"></dw-button>
+      <dw-button label="outlined" outlined class="text"></dw-button>
+    </section>
+  </div>
+
+  <div class="main dark-theme">
+    <h4>Style: Default</h4>
+    <section>
+      <dw-button label="normal"></dw-button>
+      <dw-button label="normal" class="secondary"></dw-button>
+      <dw-button label="normal" class="error"></dw-button>
+      <dw-button label="normal" raised class="secondary"></dw-button>
+      <dw-button label="normal" raised class="error"></dw-button>
+      <dw-button label="normal" disabled></dw-button>
+    </section>
+    <h4>Style: Outlined</h4>
+    <section>
+      <dw-button label="outlined" outlined></dw-button>
+      <dw-button label="outlined" outlined class="secondary"></dw-button>
+      <dw-button label="outlined" outlined class="error"></dw-button>
+      <dw-button label="outlined" outlined disabled></dw-button>
+    </section>
+    <h4>Style: Filled</h4>
+    <section>
+      <dw-button label="filled" filled></dw-button>
+      <dw-button label="filled" filled class="secondary"></dw-button>
+      <dw-button label="filled" filled raised></dw-button>
+      <dw-button label="filled" filled raised class="secondary"></dw-button>
+      <dw-button label="filled" filled disabled></dw-button>
+    </section>
+    <h4>Text buttons</h4>
+    <section>
+      <dw-button label="normal" class="text"></dw-button>
+      <dw-button label="outlined" outlined class="text"></dw-button>
+    </section>
+  </div>
+  <noscript>
+    Please enable JavaScript to view this website.
+  </noscript>
+
+  <!-- Load webcomponents-loader.js to check and load any polyfills your browser needs -->
+  <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+  <!-- Built with love using PWA Starter Kit -->
+  <script type="module" src="../dw-button.js"></script>
+</body>
+
+</html>
