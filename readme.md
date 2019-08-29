@@ -40,4 +40,3 @@ Add `disabled` attribute to make a button disabled.
 ## Known Issues
 - It's not possible to show **Normal + Raised** button in **Primary** color. It's due to the Custom CSS Property names
 used by `mwc-button` element.
-
