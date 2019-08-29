@@ -1,4 +1,9 @@
-A button Webcomponent created through LitElement and mwc-button(https://www.webcomponents.org/element/@material/mwc-button)
+# dw-button
+
+A button web component created using [`mwc-button`](https://www.webcomponents.org/element/@material/mwc-button)
+
+
+## [Demo](https://dreamworldsolutions.github.io/dw-button/demo/index.html)
 
 ## Install
 ```html
@@ -9,45 +14,29 @@ npm install @dreamworld/dw-button
 ```html
 import '@dreamworld/dw-button/dw-button.js';
 
-<dw-button label="normal"></dw-button>
+<dw-button label="OK"></dw-button>
 ```
 
-## [Demo](https://dreamworldsolutions.github.io/dw-button/demo/index.html)
+### Colors
+Button is rendered by default in Primary color. It can be rendered in secondary, error or text color too. For that 
+add corresponding class (`secondary`, `error` and `text`) to the button. e.g.
 
-## Configs/Options
-It supports all the properties of mwc-button. It support extra property
-- filled
-
-### Theme
-To configure color of the button using css variable.
-
-```css
-dw-button {
---primary-text-color: grey;
---primary-color: blue;
---accent-color: #50cA00;
---dark-primary-text-color: white;
-}
-
+```html
+<dw-button label="OK" class="secondary"></dw-button>
 ```
 
-### Theme
-Override DWButton class to create a custom button
+> it's actually main reason for creating extension of `mwc-button`.
 
-```
-class CustomButton extends DWButton {
+### Styles
+- To show button in outlined style add `outlined` attribute.
+- To show button in filled style, add `filled` attribute.
+- Additionally `raised` attribute can be used to show elevated button. As `outlined` button will never be raised, this
+doesn't work with `outlined` style. 
 
-static get styles() {
-	return [
-		DWButton.styles,
-		css`
-		.mdc-button {
-		  border-radius: 5px;
-		}`
-	];
- }
-}
-customElements.define('custom-button', CustomButton);
 
-<custom-button></custom-button>
-```
+### Disable
+Add `disabled` attribute to make a button disabled.
+
+## Known Issues
+- It's not possible to show **Normal + Raised** button in **Primary** color. It's due to the Custom CSS Property names
+used by `mwc-button` element.

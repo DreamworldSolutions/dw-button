@@ -38,7 +38,7 @@ export class DWButton extends Button {
         }
 
         /** primary-text button  css start */
-        :host(.primary-text) .mdc-button  {
+        :host(.text) .mdc-button  {
           --mdc-theme-primary: var(--mdc-theme-text-primary);
         }
 
