@@ -1,6 +1,6 @@
 {
-  "name": "@dw/dw-button",
-  "version": "1.0.7-SNAPSHOT",
+  "name": "@dreamworld/dw-button",
+  "version": "0.0.0-development",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,10 +17,14 @@
     "lit-element": "^2.2.0"
   },
   "devDependencies": {
-    "@webcomponents/webcomponentsjs": "^2.2.10"
+    "@webcomponents/webcomponentsjs": "^2.2.10",
+    "semantic-release": "beta"
   },
   "bugs": {
     "url": "https://github.com/DreamworldSolutions/dw-button/issues"
   },
-  "homepage": "https://github.com/DreamworldSolutions/dw-button#readme"
+  "homepage": "https://github.com/DreamworldSolutions/dw-button#readme",
+  "publishConfig": {
+    "access": "public"
+  }
 }
