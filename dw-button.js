@@ -13,7 +13,7 @@ import { css } from 'lit-element';
 // These are the mwc element needed by this element.
 import { Button } from "@material/mwc-button"
 
-export class DWButton extends Button {
+export class DwButton extends Button {
   static get styles() {
     return [
       Button.styles,
@@ -93,4 +93,4 @@ export class DWButton extends Button {
   }
 }
 
-window.customElements.define('dw-button', DWButton);
+window.customElements.define('dw-button', DwButton);
