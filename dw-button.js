@@ -93,4 +93,6 @@ export class DwButton extends Button {
   }
 }
 
+export const DWButton = DwButton;
+
 window.customElements.define('dw-button', DwButton);
