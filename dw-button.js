@@ -93,6 +93,7 @@ export class DwButton extends Button {
   }
 }
 
+//Previously export was like this, so this is kept for backward compatiblity. In next major version it can be removed.
 export const DWButton = DwButton;
 
 window.customElements.define('dw-button', DwButton);
