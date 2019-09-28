@@ -18,6 +18,9 @@ export class DwButton extends Button {
     return [
       Button.styles,
       css`
+        .mdc-button {
+          font-family: inherit;
+        }
         /** normal button css start */
         :host(.secondary) .mdc-button  {
           --mdc-theme-primary: var(--mdc-theme-secondary);
