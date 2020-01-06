@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@dreamworld/pwa-helpers": "init",
     "@material/mwc-button": "^0.6.0",
     "lit-element": "^2.2.0"
   },

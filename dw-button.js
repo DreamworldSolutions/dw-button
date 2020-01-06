@@ -12,8 +12,9 @@ import { css } from 'lit-element';
 
 // These are the mwc element needed by this element.
 import { Button } from "@material/mwc-button"
+import { buttonFocus } from '@dreamworld/pwa-helpers';
 
-export class DwButton extends Button {
+export class DwButton extends buttonFocus(Button) {
   static get styles() {
     return [
       Button.styles,
