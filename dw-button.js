@@ -18,6 +18,10 @@ export class DwButton extends Button {
     return [
       Button.styles,
       css`
+        :host .mdc-button {
+          margin: 0;
+        }
+
         /** normal button css start */
         :host(.secondary) .mdc-button  {
           --mdc-theme-primary: var(--mdc-theme-secondary);
