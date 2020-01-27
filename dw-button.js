@@ -22,6 +22,8 @@ export class DwButton extends buttonFocus(Button) {
         :host .mdc-button {
           margin: 0;
         }
+        
+        /* add first line */
 
         /** normal button css start */
         :host(.secondary) .mdc-button  {
