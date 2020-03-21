@@ -23,6 +23,10 @@ export class DwButton extends buttonFocus(Button) {
           margin: 0;
         }
 
+        :host([hidden]) {
+          display: none;
+        }
+
         /** normal button css start */
         :host(.secondary) .mdc-button  {
           --mdc-theme-primary: var(--mdc-theme-secondary);
