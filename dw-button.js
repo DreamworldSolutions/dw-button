@@ -98,7 +98,7 @@ export class DwButton extends buttonFocus(Button) {
     /**
     * call blur method to fix ripple effect after button click.
     */
-    this.addEventListener('click', () => { this.blur(); })
+    // this.addEventListener('click', () => { this.blur(); })
   }
 }
 
