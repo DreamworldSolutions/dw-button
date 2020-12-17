@@ -95,6 +95,8 @@ export class DwButton extends buttonFocus(Button) {
     super();
     this.filled = false;
 
+    console.log("dw-button changes is applied.")
+
     /**
     * call blur method to fix ripple effect after button click.
     */
