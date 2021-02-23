@@ -74,6 +74,11 @@ export class DwButton extends buttonFocus(Button) {
         :host([filled][disabled]) .mdc-button:disabled {
           background-color: var( --dw-disabled-background-color, var(--mdc-theme-divider-on-light));
         }
+
+        .trailing-icon {
+          display: flex;
+          align-items: center;
+        }
         `
     ];
   }
