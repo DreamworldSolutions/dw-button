@@ -21,6 +21,7 @@ export class DwButton extends buttonFocus(Button) {
       css`
         :host .mdc-button {
           margin: 0;
+          white-space: nowrap;
         }
 
         :host([hidden]) {
