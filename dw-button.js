@@ -114,18 +114,18 @@ export class DwButton extends buttonFocus(Button) {
   connectedCallback() {
     super.connectedCallback();
 
-    this.addEventListener("mousedown", this._onMouseDown);
+    this.addEventListener("pointerdown", this._onPointerdown);
     this.addEventListener("blur", this._onBlur);
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
 
-    this.removeEventListener("mousedown", this._onMouseDown);
+    this.removeEventListener("pointerdown", this._onPointerdown);
     this.removeEventListener("blur", this._onBlur);
   }
 
-  _onMouseDown() {
+  _onPointerdown() {
     this._noFocusEffect = true;
   }
 
