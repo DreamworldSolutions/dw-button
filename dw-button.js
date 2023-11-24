@@ -84,6 +84,10 @@ export class DwButton extends buttonFocus(Button) {
           display: flex;
           align-items: center;
         }
+
+        .mdc-button {
+          height: var(--dw-button-height, 36px);
+        }
       `,
     ];
   }
